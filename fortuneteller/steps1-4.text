@@ -1,0 +1,21 @@
+
+1/
+In the workspace on the right is a code editor, terminal, and web browser. Right now it’s completely empty, but soon we’ll have a fully functional web application.
+
+Inside the terminal create a Django project named fortuneteller by running in terminal:
+
+django-admin startproject fortuneteller
+2/
+To remove any errors from the server, we’ll have to run a migration to configure the database used by the default apps. In the terminal run:
+
+python manage.py migrate
+
+3./
+Now that the project is created and configured, we can test if there were any errors while creating the Django project.
+
+Start the development server on port 4001 by running in the terminal:
+
+python manage.py runserver 0.0.0.0:4001
+
+4./
+After the server is started, navigate to localhost in the browser, and you should see a default splash page from Django. Then stop the development server using ctrl+c.

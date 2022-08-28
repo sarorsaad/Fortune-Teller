@@ -1,0 +1,5 @@
+5./
+Next, we want to create a new app named randomfortune that will eventually display a fortune at random in the browser.
+
+Use Django’s startapp command with the manage.py script and create an app named randomfortune.
+python manage.py startapp randomfortune
