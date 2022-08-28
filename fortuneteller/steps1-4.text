@@ -1,6 +1,6 @@
 
 1/
-In the workspace on the right is a code editor, terminal, and web browser. Right now it’s completely empty, but soon we’ll have a fully functional web application.
+
 
 Inside the terminal create a Django project named fortuneteller by running in terminal:
 

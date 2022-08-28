@@ -1,0 +1,13 @@
+9.
+To send fortune.html to our client, we’ll write a view function and send it when the page is requested.
+
+Inside the randomfortune app, open views.py. Define a new function named fortune() that takes a single parameter, request.
+ In fortune(), return the render function with two arguments, the request and the path to fortune.html as a string,
+  "randomfortune/fortune.html".
+
+
+Hint
+The fortune() function will look similar to:
+
+def myView(request):
+  return (request, "myApp/myTemplate.html")

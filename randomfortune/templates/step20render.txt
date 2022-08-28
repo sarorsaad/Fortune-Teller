@@ -1,0 +1,12 @@
+Render Context Inside Template
+20.
+The last step to render the fortune in the template is to use the Django template language to replace the placeholder text.
+ Inside fortune.html, between the <p></p> tags, replace the text with {{ fortune }}.
+
+and now whenever the context is passed to the template, the value of fortune will be placed in the template!
+
+
+Hint
+The <p> tag will look like:
+
+<p>{{ fortune }}</p>

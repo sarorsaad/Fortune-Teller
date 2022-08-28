@@ -1,0 +1,28 @@
+14.
+Now that we have our app’s URLconfig setup, we will have to import it in the project’s URLconfig for the URLs to be picked up by the Django project.
+ We’ll have to import the include module to include the URL configuration file.
+
+Inside fortuneteller/fortuneteller, import the include module from django.urls.
+
+
+Hint
+Before urlpatterns, inside fortuneteller/fortuneteller/urls.py, import include from django.urls
+
+15.
+We’ve imported include, now we have to make use of it.
+
+In the existing urlpatterns list, add another path() with the arguments:
+
+"" to reference the home page
+include() with randomfortune‘s URLs as a string.
+root directory to start the development server again with python3 manage.py runserver 0.0.0.0:4001 and when you refresh the browser page, you should see fortune.html.
+
+
+Hint
+Inside the project URLconfig, fortuneteller/fortuneteller/urls.py, include the randomfortune URLs, using a list named urlpatterns. The urlpatterns list will similar to:
+
+urlpatterns = [
+  # ... other paths
+  path("", include("myApp.urls"))
+]
+Note: If you’re not in the root folder, you won’t have access to manage.py, so run cd fortuneteller first.

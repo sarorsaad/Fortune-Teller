@@ -1,0 +1,44 @@
+Wire Up View
+10.///
+Our fortune() view function sends back fortune.html when called. We’ll need to tell Django which URL we want to direct to this function.
+
+First, create the URLconf for the randomfortune app by creating a file named urls.py inside the app directory.
+
+
+
+
+
+
+11.
+Inside urls.py, we’ll need to import a couple of things to call the view function when the URL is requested.
+
+At the top of urls.py import:
+
+path module from django.urls
+the functions from views.py.
+
+Hint
+Import the necessary items using Python import statements:
+
+from django.urls import path
+from . import views
+
+
+12.
+After importing the necessary modules into urls.py, we will create a list of patterns for Django to match URLs against.
+ Create a list called urlpatterns and set it as a blank list.
+Hint
+Create a Python list by writing in urls.py:
+urlpatterns = []
+13.
+Inside the list, we’ll add a route to the fortune() function using the path() function.
+
+Since we want to have our random fortune appear as our main page, provide an empty string, "", as the first argument to path().
+ Pass the view function, fortune(), as the second argument. 
+ Be sure to use dot notation since we are referencing the function from views.py!
+
+
+Hint
+urlpatterns = [
+  path("", views.functionName)
+]

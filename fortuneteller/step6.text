@@ -1,9 +1,11 @@
 6.
-Great job! The startapp command will create files and folders for the new app. We’ll have to add our new app, randomfortune to our list of installed apps for our Django project to be aware of it.
+ The startapp command will create files and folders for the new app. 
+ We’ll have to add our new app, randomfortune to our list of installed apps for our Django project to be aware of it.
 
-In the code editor, open up settings.py inside fortuneteller/fortuneteller. Find the list named INSTALLED_APPS and add the config file for randomfortune by including "randomfortune.apps.RandomfortuneConfig" to the list.
+In the code editor, open up settings.py inside fortuneteller/fortuneteller.
+ Find the list named INSTALLED_APPS and add the config file for randomfortune by including 
+ "randomfortune.apps.RandomfortuneConfig" to the list.
 
-After you add the app to the list, click “Save”.
 
 
 Hint

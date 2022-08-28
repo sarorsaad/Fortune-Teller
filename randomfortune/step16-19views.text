@@ -1,0 +1,55 @@
+Sending a Context to the Template
+16.
+ Our static fortune.html is sent whenever the page, localhost is requested. 
+ Now, we want to replace the text with a new message every time we load the page!
+
+First, start by creating a list of fortunes named fortuneList inside our app’s views.py file. 
+Define it outside of the fortune() function.
+
+Add some strings containing fortune-telling sayings in the fortuneList.
+ Be as creative as you’d like! (There’s also some samples in the Hint if you need some inspiration)
+
+
+Hint
+Inside views.py, above the fortune() function add the following list:
+
+fortuneList = [
+   "All will go well with your new project.",
+   "If you continually give, you will continually have.",
+   "Self-knowledge is a life long process.",
+   "You are busy, but you are happy.",
+   "Your abilities are unparalleled.",
+   "Those who care will make the effort.",
+   "Now is the time to try something new.",
+   "Miles are covered one step at a time.",
+   "Don’t just think, act!"
+]
+17.
+To select a random fortune from the list we’ll use a built-in Python function, random.choice().
+
+Import the random module at the top of views.py. 
+Then inside the fortune() function create a variable named fortune and set it equal to random.choice(fortuneList)
+
+fortune = random.choice(fortuneList)
+18.
+ We now have a random fortune stored in fortune. 
+ To send it to the HTML template, we’ll create a context variable to send with the template.
+
+Below where we set fortune, create a dictionary named context.
+ In the dictionary, create a key named "fortune" and set fortune as the value.
+
+
+Hint
+Our context variable will look similar to:
+
+context = {
+  "key": value
+}
+19.
+Now add our newly created context as the third argument to the render() function that fortune() returns.
+
+
+Hint
+The return of our view function will look similar to:
+
+return render(request, "pathto/template", context)
